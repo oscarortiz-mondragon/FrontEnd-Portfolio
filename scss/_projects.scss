@@ -1,0 +1,87 @@
+.projects {
+  padding-bottom: 2rem;
+  &BioImage {
+    height: 60vh;
+    width: 100%;
+    background: linear-gradient(
+        45deg,
+        rgba($primaryColor, 0.8),
+        rgba($secondaryColor, 0.3)
+      ),
+      url("./images/starNight.jpg") center/cover fixed no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    .textSecondary {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+  &Items {
+    width: 60vh;
+    margin: 2rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+  &Item {
+    position: relative;
+    border-bottom: 5px solid $secondaryColor;
+    overflow: hidden;
+    cursor: pointer;
+    img {
+      width: 100%;
+    }
+    &::after {
+      content: "";
+      // why the parent is relative is so that this can be absolute
+      position: absolute;
+      // pushes to bottom
+      top: 100%;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: $secondaryColor;
+      opacity: 0;
+      @include transition-ease;
+    }
+    &:hover {
+      &::after {
+        top: 0;
+        opacity: 0.9;
+      }
+      .projectsBtn {
+        opacity: 1;
+      }
+    }
+  }
+  &Btns {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    text-align: center;
+  }
+  &Btn {
+    opacity: 0;
+    color: setTextColor($secondaryColor);
+    @include transition-ease;
+    &:hover {
+      color: setTextColor(setTextColor($secondaryColor));
+    }
+  }
+
+  .socialIcons {
+    display: flex;
+    flex-direction: column;
+  }
+  footer {
+    transform: rotate(90deg) translate(-3rem, -5rem);
+  }
+}
