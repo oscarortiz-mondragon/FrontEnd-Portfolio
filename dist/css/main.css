@@ -14,7 +14,7 @@
           align-items: center;
   text-align: center;
   background-size: cover;
-  background: linear-gradient(45deg, rgba(39, 39, 39, 0.8), rgba(255, 101, 47, 0.3)), no-repeat, url("./images/oscarPro.jpg") center/cover fixed no-repeat;
+  background: linear-gradient(45deg, rgba(39, 39, 39, 0.8), rgba(255, 101, 47, 0.3)), no-repeat, url("./images/starNight.jpg") center/cover fixed no-repeat;
 }
 
 .homeName {
@@ -254,7 +254,7 @@
 }
 
 .about .jobs {
-  width: 60vh;
+  width: 40vh;
   margin: 2rem auto 0 auto;
   display: -ms-grid;
   display: grid;
@@ -322,7 +322,7 @@
 }
 
 .projectsItems {
-  width: 60vh;
+  width: 40vh;
   margin: 2rem auto 0 auto;
   display: -ms-grid;
   display: grid;
@@ -431,6 +431,40 @@
 .contact .socialIcons {
   position: initial;
   margin-top: 2rem;
+}
+
+@media screen and (min-width: 760px) {
+  .menuButton {
+    visibility: hidden;
+  }
+  .Nav {
+    visibility: visible;
+    display: block;
+    position: absolute;
+  }
+  .Nav .menuNav {
+    display: block;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    height: 100%;
+    background-color: transparent;
+    text-align: center;
+  }
+  .Nav .menuNavItem {
+    display: inline;
+    padding-right: 1.5rem;
+  }
+  .Nav .menuNavItemLink {
+    font-size: 1.5rem;
+  }
+  .projectsItems {
+    width: 60vh;
+  }
+  .about .jobs {
+    width: 60vh;
+  }
 }
 
 body {

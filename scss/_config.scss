@@ -17,8 +17,10 @@ $secondaryColor: #ff652f;
     @return #fff;
   }
 }
+
+// Begin mobile friendly
 @mixin media-md {
-  @media screen and (min-width: 780px) {
+  @media screen and (min-width: 760px) {
     @content;
   }
 }

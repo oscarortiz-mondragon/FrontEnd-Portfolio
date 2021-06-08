@@ -1,0 +1,36 @@
+@include media-md {
+  .menuButton {
+    visibility: hidden;
+  }
+  .Nav {
+    visibility: visible;
+    display: block;
+    position: absolute;
+    .menuNav {
+      display: block;
+      transform: translateY(0);
+      transform: translateX(0);
+      height: 100%;
+      background-color: transparent;
+      text-align: center;
+      &Item {
+        display: inline;
+        padding-right: 1.5rem;
+        &Link {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  // Project issues with image on mobile
+  .projects {
+    &Items {
+      width: 60vh;
+    }
+  }
+  .about {
+    .jobs {
+      width: 60vh;
+    }
+  }
+}
